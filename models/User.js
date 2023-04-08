@@ -70,7 +70,7 @@ class User {
                     if (result == false) {
                         editUser.email = email
                     }else{
-                        return { status: false, erro: "O e-mail já está cadastrado" }
+                        return { status: false, erro: "Esse e-mail já está cadastrado" }
                     }
                 }
             }
@@ -92,6 +92,20 @@ class User {
 
         } else {
             return { status: false, erro: "O usuario não existe" }
+        }
+    }
+
+    async delete(id){
+        var user = await this.findById(id)
+        if (user != undefined) {
+            try{
+                await knex.delete().where({id: id}).table("users")
+                return {status: true}
+            }catch(erro){
+                return {status: false, erro: erro}
+            }
+        }else{
+            return {status: false, erro: "O usuario não existe, portando não pode ser deletado."}
         }
     }
 

@@ -44,7 +44,7 @@ class UserController {
 
         if (emailExists) {
             res.status(406)
-            res.json({ erro: "O e-mail já está cadastrado!" })
+            res.json({ erro: "Esse e-mail já está cadastrado!" })
             return
         }
 
@@ -69,6 +69,19 @@ class UserController {
         }else{
             res.status(406)
                 res.send("Ocorreu um erro no servidor!")
+        }
+    }
+
+    async delete(req, res){
+        var id = req.params.id
+        var result = await User.delete(id)
+
+        if (result.status) {
+            res.status(200)
+            res.send("TUDO OK")
+        }else{
+            res.status(406)
+            res.send(result.erro)
         }
     }
 }
