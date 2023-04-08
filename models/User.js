@@ -6,9 +6,29 @@ class User {
     async new(email, password, name) {
 
         try {
-            await knex.insert({ email, password, name, role: 0 }).table("users")
+
+            var hash = await bcrypt.hash(password, 10)
+
+            await knex.insert({ email, password: hash, name, role: 0 }).table("users")
         } catch (erro) {
             console.log(erro)
+        }
+    }
+
+    async findEmail(email){
+        
+        try{
+            var result = await knex.select("*").from("users").where({email: email})
+
+            if (result.length > 0) {
+                return true
+            }else{
+                return false
+            }
+
+        } catch(erro){
+            console.log(erro)
+            return false
         }
     }
 }
