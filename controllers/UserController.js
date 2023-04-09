@@ -1,5 +1,6 @@
 
 var User = require("../models/User")
+var PasswordToken = require("../models/PasswordToken")
 
 class UserController {
     async index(req, res) {
@@ -54,6 +55,7 @@ class UserController {
         res.send("TUDO OK!")
     }
 
+    //editar um usuario
     async edit(req, res) {
         var { id, name, email, role } = req.body
         var result = await User.update(id, name, email, role)
@@ -72,6 +74,7 @@ class UserController {
         }
     }
 
+    //deletar usuario pelo id
     async delete(req, res){
         var id = req.params.id
         var result = await User.delete(id)
@@ -79,6 +82,20 @@ class UserController {
         if (result.status) {
             res.status(200)
             res.send("TUDO OK")
+        }else{
+            res.status(406)
+            res.send(result.erro)
+        }
+    }
+
+
+    //recuperar senha
+    async recoverPassword(req, res){
+        var email = req.body.email
+        var result = await PasswordToken.create(email)
+        if (result.status) {
+            res.status(200)
+            res.send("" + result.token)
         }else{
             res.status(406)
             res.send(result.erro)
