@@ -55,7 +55,7 @@ class UserController {
         await User.new(email, password, name)
 
         res.status(200)
-        res.send("TUDO OK!")
+        res.send("Conta criado com sucesso!")
     }
 
     //editar um usuario
@@ -66,7 +66,7 @@ class UserController {
         if (result != undefined) {
             if (result.status) {
                 res.status(200)
-                res.send("TUDO OK")
+                res.send("Usuário foi editado com sucesso!")
             } else {
                 res.status(406)
                 res.send(result.erro)
@@ -84,7 +84,7 @@ class UserController {
 
         if (result.status) {
             res.status(200)
-            res.send("TUDO OK")
+            res.send("Você deletou um usuário")
         }else{
             res.status(406)
             res.send(result.erro)

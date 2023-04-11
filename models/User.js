@@ -122,7 +122,7 @@ class User {
                 return {status: false, erro: erro}
             }
         }else{
-            return {status: false, erro: "O usuario não existe, portando não pode ser deletado."}
+            return {status: false, erro: "O usuario não existe, portanto não pode ser deletado."}
         }
     }
 
