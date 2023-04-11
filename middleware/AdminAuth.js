@@ -7,23 +7,23 @@ module.exports = function (req, res, next) {
     if (authToken != undefined) {
         const bearer = authToken.split(' ')
         var token = bearer[1]
-        try{
+        try {
             var decoded = jwt.verify(token, secret)
             if (decoded.role == 1) {
                 next()
-            }else{
+            } else {
                 res.status(403)
-        res.send("Você não tem autorização!")
-        return
+                res.send("Você não tem autorização!")
+                return
             }
-        }catch(erro){
+        } catch (erro) {
             res.status(403)
-        res.send("Você não está autenticado")
-        return
+            res.send("Você não está autenticado")
+            return
         }
 
 
-    }else{
+    } else {
         res.status(403)
         res.send("Você não está autenticado")
         return

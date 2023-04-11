@@ -28,6 +28,8 @@ class PasswordToken {
         }
     }
 
+    
+
     //validação do token recebido por email
     async validate(token){
         try{
@@ -56,6 +58,9 @@ class PasswordToken {
     async setUsed(token){
         await knex.update({used: 1}).where({token: token}).table("passwordtokens")
     }
+
+    
+    
 
 }
 
