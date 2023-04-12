@@ -150,7 +150,7 @@ A aplicação será executada na porta 8686.
 
 ### Caso o usuário tente usar o mesmo token para mudar a senha, ele recebe a seguinte mensagem
 <h1 align="left">
-  <img width="450px" height="400px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/Postman/token_usado.png" />
+  <img width="450px" height="400px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/Postman/token_ja_foi_usado.png" />
 </h1>
 
 ## Conclusão
