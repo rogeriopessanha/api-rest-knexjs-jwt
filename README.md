@@ -83,33 +83,82 @@ A aplicação será executada na porta 8686.
 ### Usando o método POST, para criar um usuário.
 <h1 align="left">
   <img width="450px" height="400px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/Postman/criando_usuario.png" />
-</h1
+</h1>
   
-##  
 ### Não é possivel fazer o cadastro com um e-mail já cadastrado no sistema, cada e-mail é único.
 <h1 align="left">
   <img width="450px" height="400px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/Postman/erro_usuario_ja_cadastrado.png" />
-</h1 
+</h1> 
   
-##  
 ### Usando o método GET, para fazer uma busca em todos os usuários do sistema. lembrando que é preciso ter feito o login antes.
 <h1 align="left">
   <img width="450px" height="550px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/Postman/listando_usuarios_depois_de_logar.png" />
-</h1
-  
-##  
+</h1>
+   
 ### Caso o usuário não faça o login, a seguinte mensagem irá aparecer para ele.
 <h1 align="left">
   <img width="450px" height="400px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/Postman/erro_lista_de_usuarios.png" />
-</h1
-  
+</h1>
 
+### Usando o método PUT para editar um usuário.
+<h1 align="left">
+  <img width="450px" height="550px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/Postman/editando_usuario.png" /> 
+</h1>
 
+### Usando o método DELETE para deletar um usuário.
+<h1 align="left">
+  <img width="450px" height="400px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/Postman/deletando_usuario.png" />
+</h1>
+ 
+### Erro ao tentar deletar um usuário que já foi deletado do sistema.
+<h1 align="left">
+  <img width="450px" height="400px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/Postman/usuario_ja_deletado.png" />
+</h1>
 
+## Recuperação de senha por token:
+### Usando o método POST na rota "/recoverpassword" é gerado um token que o usuário recebe por e-mail
+<h1 align="left">
+  <img width="450px" height="400px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/Postman/recebendo_token_para_alterar_senha.png" />
+</h1>
+
+### O token fica armazenado no banco de dados, até que o usuário use o token, cada token só pode ser usado uma única vez
+<h1 align="left">
+  <img width="700px" height="150px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/HeidiSQL/token_gerado_recuperar_senha.png" />
+</h1>
+
+### O usuário acessa ou pode ser redirecionado para a rota "/changepassword", onde ele vai informar o número do token, nesse caso o numero "1681193667853"
+### Se o número estiver correto, ele recebe a seguinte mensagem:
+<h1 align="left">
+  <img width="450px" height="400px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/Postman/senha_alterada_com_sucesso.png" />
+</h1>
+
+### no banco de dados podemos vê que a senha foi alterada, mesmo com a criptografia do bcrypt, podemos perceber que os caracters foi mudado
+### senha antiga
+<h1 align="left">
+  <img width="950px" height="70px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/HeidiSQL/senha_antiga.png" />
+</h1>
+### senha nova
+<h1 align="left">
+  <img width="950px" height="70px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/HeidiSQL/senha_nova.png" />
+</h1>
+
+### No banco de dados fica registrado que o token já foi usado, reparando no campo "used" onde era 0, mudou para 1.
+<h1 align="left">
+  <img width="700px" height="150px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/HeidiSQL/token_usado_01.png" />
+</h1>
+
+### Caso o usuário tente usar o mesmo token para mudar a senha, ele recebe a seguinte mensagem
+<h1 align="left">
+  <img width="450px" height="400px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/Postman/token_usado.png" />
+</h1>
 
 ## Conclusão
 #### Esta API REST oferece uma maneira segura e eficiente de gerenciar usuários com as operações CRUD e autenticação JWT.
-####  Utilizando o Knex.js e dotenv para facilitar o desenvolvimento, manutenção e segurança da aplicação.
+####  Utilizando o Knex.js e dotenv para facilitar o desenvolvimento, manutenção e segurança da aplicação. 
+
+##
+## Autor
+### Rogerio Pessanha
 
 
 
