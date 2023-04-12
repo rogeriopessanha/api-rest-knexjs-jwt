@@ -57,7 +57,7 @@ A aplicação será executada na porta 8686.
 ##### Ao fazer o login, é gerado esse resultado abaixo, um token de autenticação.
 
 <h1 align="left">
-  <img width="900px" height="450px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/Postman/login_gerando_token_autenticacao.png" />
+  <img width="600px" height="250px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/Postman/login_gerando_token_autenticacao.png" />
 </h1>
 
 ## Criptografia de senhas com Bcrypt
@@ -66,6 +66,23 @@ A aplicação será executada na porta 8686.
 <h1 align="left">
   <img width="900px" height="130px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/HeidiSQL/bcrypt_senhas.png" />
 </h1>
+
+## Utilização do Nodemon
+#### A aplicação utiliza o Nodemon para reiniciar o servidor automaticamente sempre que um arquivo for modificado durante o desenvolvimento.
+
+## Variáveis de ambiente com dotenv
+#### A API utiliza o dotenv para gerenciamento de variáveis de ambiente. 
+#### O dotenv é uma biblioteca que carrega variáveis de ambiente de um arquivo .env para process.env.
+<h1 align="left">
+  <img width="350px" height="300px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/codigo/database_dotenv.png" />
+</h1>
+
+##Funcionalidade
+
+
+## Conclusão
+#### Esta API REST oferece uma maneira segura e eficiente de gerenciar usuários com as operações CRUD e autenticação JWT.
+####  Utilizando o Knex.js e dotenv para facilitar o desenvolvimento, manutenção e segurança da aplicação.
 
 
 
