@@ -22,7 +22,7 @@ git clone https://github.com/rogeriopessanha/api-rest-knexjs-jwt.git
 ```
 ## Dependências
 <h1 align="left">
-  <img width="200px" height="200px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/codigo/dependencias.png" />
+  <img width="300px" height="300px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/codigo/dependencias.png" />
 </h1>
 
 ## Instalando as dependências
@@ -77,7 +77,33 @@ A aplicação será executada na porta 8686.
   <img width="350px" height="300px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/codigo/database_dotenv.png" />
 </h1>
 
-##Funcionalidade
+## Funcionalidade CRUD:
+
+### Usando o método POST, para criar um usuário.
+<h1 align="left">
+  <img width="450px" height="400px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/Postman/criando_usuario.png" />
+</h1
+  
+##  
+### Não é possivel fazer o cadastro com um e-mail já cadastrado no sistema, cada e-mail é único.
+<h1 align="left">
+  <img width="450px" height="400px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/Postman/erro_usuario_ja_cadastrado.png" />
+</h1 
+  
+##  
+### Usando o método GET, para fazer uma busca em todos os usuários do sistema. lembrando que é preciso ter feito o login antes.
+<h1 align="left">
+  <img width="450px" height="550px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/Postman/listando_usuarios_depois_de_logar.png" />
+</h1
+  
+##  
+### Caso o usuário não faça o login, a seguinte mensagem irá aparecer para ele.
+<h1 align="left">
+  <img width="450px" height="400px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/Postman/erro_lista_de_usuarios.png" />
+</h1
+  
+
+
 
 
 ## Conclusão
