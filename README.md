@@ -12,7 +12,7 @@
 - JWT
 - Bcrypt
 - Nodemon
-- DotEnv
+- Dotenv
 
 ## Clonando o repositório
 ### Clone o repositório para a sua máquina local usando o comando:
