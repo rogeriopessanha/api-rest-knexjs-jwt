@@ -2,7 +2,7 @@
 ## 📝 Proposta:
 ### Esta API REST foi construída utilizando Node.js e o banco de dados MySQL gerenciado pelo HeidiSQL. 
 ### A API permite a gestão de usuários com as operações CRUD (criar, ler, atualizar e deletar) e é protegida por autenticação JWT
-### Para facilitar a conexão com o banco de dados, utilizamos o Knex.js e para gerenciamento de variáveis de ambiente, o dotenv.
+### Para facilitar a conexão com o banco de dados estou utilizando o Knex.js e o Dotenv para gerenciamento de variáveis de ambiente.
 
 ## 💻 Tecnologias e ferramentas utilizadas:
 - Nodejs
