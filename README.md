@@ -46,6 +46,7 @@ A aplicação será executada na porta 8686.
 
 ## Rotas da API
 #### A API possui as seguintes rotas:
+#### E algumas dessas rotas só pode ser acessada por um administrador do sistema.
 
 <h1 align="left">
   <img width="600px" height="250px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/codigo/rotas.png" />
