@@ -152,14 +152,13 @@ A aplicação será executada na porta 8686.
   <img width="450px" height="400px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/Postman/token_usado.png" />
 </h1>
 
-
-
-
-
-
 ## Conclusão
 #### Esta API REST oferece uma maneira segura e eficiente de gerenciar usuários com as operações CRUD e autenticação JWT.
 ####  Utilizando o Knex.js e dotenv para facilitar o desenvolvimento, manutenção e segurança da aplicação. 
+
+##
+## Autor
+### Rogerio Pessanha
 
 
 
