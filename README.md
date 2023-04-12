@@ -63,7 +63,7 @@ A aplicação será executada na porta 8686.
 
 ## Criptografia de senhas com Bcrypt
 #### A API utiliza a biblioteca Bcrypt para criptografar as senhas dos usuários.
-#### Mesmo o responsável pelo banco de dados não tem acesso as senhas dos usuários e assim tornando tudo mais seguro e conviável.
+#### Mesmo o responsável pelo banco de dados não tem acesso as senhas dos usuários e assim tornando tudo mais seguro e confiável.
 <h1 align="left">
   <img width="900px" height="130px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/HeidiSQL/bcrypt_senhas.png" />
 </h1>
