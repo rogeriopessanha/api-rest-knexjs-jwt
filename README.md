@@ -79,7 +79,7 @@ A aplicação será executada na porta 8686.
   <img width="350px" height="300px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/codigo/database_dotenv.png" />
 </h1>
 
-## Funcionalidade CRUD:
+## Funcionamento CRUD:
 
 ### Usando o método POST, para criar um usuário.
 <h1 align="left">
