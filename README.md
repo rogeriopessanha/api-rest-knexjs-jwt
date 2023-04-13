@@ -135,10 +135,13 @@ A aplicação será executada na porta 8686.
 
 ### no banco de dados podemos vê que a senha foi alterada, mesmo com a criptografia do bcrypt, podemos perceber que os caracters foi mudado
 ### senha antiga
+
 <h1 align="left">
   <img width="950px" height="70px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/HeidiSQL/senha_antiga.png" />
 </h1>
+
 ### senha nova
+
 <h1 align="left">
   <img width="950px" height="70px" src="https://github.com/rogeriopessanha/api-rest-knexjs-jwt/blob/main/assets/HeidiSQL/senha_nova.png" />
 </h1>
